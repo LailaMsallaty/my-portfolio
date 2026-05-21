@@ -298,12 +298,12 @@ function Projects() {
   return (
     <section id="projects" ref={ref} style={{ padding: "4rem 1.5rem", background: C.bg }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: "1.75rem", flexWrap: "wrap", gap: "1.25rem", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(18px)", transition: "all 0.6s ease" }}>
+        <div className="projects-header" style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: "1.75rem", flexWrap: "wrap", gap: "1.25rem", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(18px)", transition: "all 0.6s ease" }}>
           <div>
             <p style={{ fontFamily: "'Inter',sans-serif", color: C.pink, fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", marginBottom: "0.4rem" }}>Work</p>
             <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(1.8rem,4vw,2.6rem)", fontWeight: 800, color: C.text, margin: 0, letterSpacing: "-0.02em" }}>Selected Projects</h2>
           </div>
-          <div style={{ display: "flex", border: `1px solid ${C.border}`, borderRadius: 8, overflow: "hidden" }}>
+          <div className="filter-tabs" style={{ display: "flex", border: `1px solid ${C.border}`, borderRadius: 8, overflow: "hidden", flexShrink: 0 }}>
             {TABS.map((t, i) => (
               <button key={t.label} onClick={() => setFilter(t.label)} style={{ background: filter === t.label ? C.grad : C.bgAlt, color: filter === t.label ? "#fff" : C.muted, border: "none", borderRight: i < TABS.length - 1 ? `1px solid ${C.border}` : "none", padding: "0.5rem 1rem", fontFamily: "'Inter',sans-serif", fontSize: "0.78rem", fontWeight: filter === t.label ? 600 : 500, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
                 {t.label} ({t.count})
@@ -415,6 +415,9 @@ export default function App() {
           .contact-grid { grid-template-columns:1fr !important; }
           .stats-row { gap:1.5rem !important; }
           .hero-grid { padding-top:5rem !important; padding-bottom:2rem !important; }
+          .projects-header { flex-direction:column !important; align-items:flex-start !important; }
+          .filter-tabs { width:100% !important; }
+          .filter-tabs button { flex:1 !important; font-size:0.72rem !important; padding:0.45rem 0.5rem !important; }
         }
       `}</style>
       <Navbar />
