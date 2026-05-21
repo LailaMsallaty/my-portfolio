@@ -7,7 +7,6 @@ const SKILLS = [
   { category: "Languages & Frameworks", items: ["PHP", "Laravel", "JavaScript", "React.js", "HTML/CSS", "CodeIgniter", "Delphi Pascal"] },
   { category: "Databases & APIs", items: ["MySQL", "SQL", "RESTful APIs", "JSON", "Webhooks"] },
   { category: "Integrations", items: ["Shopify", "WooCommerce", "Salla", "Wix", "MyFatoorah", "Neoleap"] },
-  { category: "Enterprise Systems", items: ["Microsoft Dynamics 365", "Wasfaty", "POS Systems"] },
   { category: "Tools & Practices", items: ["Git / GitHub", "Agile", "Multi-tenancy", "Code Review", "Junior Mentoring"] },
 ];
 
