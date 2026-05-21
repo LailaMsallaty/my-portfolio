@@ -212,8 +212,8 @@ function Hero() {
 
         {/* ── RIGHT CARD ── */}
         <div className="hero-card" style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 24, padding: "2.5rem 2rem", boxShadow: "0 12px 50px rgba(45,21,64,0.1)", width: 290, display: "flex", flexDirection: "column", gap: "1.5rem", alignItems: "center", textAlign: "center", opacity: loaded ? 1 : 0, transition: "all 1s ease 0.5s", flexShrink: 0 }}>
-          <div style={{ width: 130, height: 130, borderRadius: "50%", background: C.bgAlt, border: `2px solid ${C.pinkBorder}`, display: "flex", alignItems: "center", justifyContent: "center", padding: 14, boxShadow: "0 8px 24px rgba(240,135,154,0.18)" }}>
-            <img src="/logo-lt.png" alt="LailaTech" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+          <div style={{ width: 130, height: 130, borderRadius: "50%", background: C.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "4rem", boxShadow: "0 8px 24px rgba(240,135,154,0.25)" }}>
+            👩‍💻
           </div>
           <div>
             <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: "1.1rem", color: C.text }}>Laila Msallaty</div>
@@ -248,7 +248,7 @@ function About() {
               Developer & <span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Business Owner</span>
             </h2>
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.97rem", color: C.muted, lineHeight: 1.85, marginBottom: "1.25rem" }}>
-              I'm Laila Msallaty, a backend and integration engineer with 5+ years of experience building scalable web applications and complex API integrations for clients across the UK and beyond.
+              I'm Laila Msallaty, a backend engineer and full stack developer with 5+ years of experience building scalable web applications for clients across the UK and beyond.
             </p>
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.97rem", color: C.muted, lineHeight: 1.85, marginBottom: "2rem" }}>
               I'm also the founder of <span style={{ color: C.text, fontWeight: 700 }}>LailaTech</span> — a web design & development business based in London, UK, where I help businesses of all sizes build professional, high-performing websites tailored to their goals.
@@ -278,7 +278,7 @@ function About() {
               Building smart, modern websites that grow your business.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              {[["🌐","Web Design & Development"],["⚡","API Integrations"],["📱","Responsive & Mobile-First"],["🔧","Ongoing Support"]].map(([icon, text]) => (
+              {[["🌐","Web Design & Development"],["🛒","Build E-Commerce Websites"],["📱","Responsive & Mobile-First"],["🔧","Ongoing Support"]].map(([icon, text]) => (
                 <div key={text} style={{ display: "flex", alignItems: "center", gap: "0.75rem", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, padding: "0.6rem 1rem" }}>
                   <span style={{ fontSize: "1.1rem" }}>{icon}</span>
                   <span style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: C.text, fontWeight: 500 }}>{text}</span>
