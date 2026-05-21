@@ -234,6 +234,64 @@ function Hero() {
   );
 }
 
+function About() {
+  const [ref, inView] = useInView();
+  return (
+    <section id="about-section" ref={ref} style={{ padding: "4rem 1.5rem", background: C.bg }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(24px)", transition: "all 0.7s ease" }} className="about-grid">
+
+          {/* Left — text */}
+          <div>
+            <p style={{ fontFamily: "'Inter',sans-serif", color: C.pink, fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", marginBottom: "0.4rem" }}>About Me</p>
+            <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(1.8rem,4vw,2.4rem)", fontWeight: 800, color: C.text, margin: "0 0 1.25rem", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+              Developer & <span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Business Owner</span>
+            </h2>
+            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.97rem", color: C.muted, lineHeight: 1.85, marginBottom: "1.25rem" }}>
+              I'm Laila Msallaty, a backend and integration engineer with 5+ years of experience building scalable web applications and complex API integrations for clients across the UK and beyond.
+            </p>
+            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.97rem", color: C.muted, lineHeight: 1.85, marginBottom: "2rem" }}>
+              I'm also the founder of <span style={{ color: C.text, fontWeight: 700 }}>LailaTech</span> — a web design & development business based in London, UK, where I help businesses of all sizes build professional, high-performing websites tailored to their goals.
+            </p>
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <div style={{ background: C.pinkSoft, border: `1px solid ${C.pinkBorder}`, borderRadius: 8, padding: "0.6rem 1.2rem" }}>
+                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.72rem", color: C.pink, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>Based in</div>
+                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.9rem", color: C.text, fontWeight: 600, marginTop: 2 }}>🇬🇧 London, UK</div>
+              </div>
+              <div style={{ background: C.purpleSoft, border: `1px solid ${C.purpleBorder}`, borderRadius: 8, padding: "0.6rem 1.2rem" }}>
+                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.72rem", color: C.purple, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>Business</div>
+                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.9rem", color: C.text, fontWeight: 600, marginTop: 2 }}>💼 LailaTech</div>
+              </div>
+              <div style={{ background: C.pinkSoft, border: `1px solid ${C.pinkBorder}`, borderRadius: 8, padding: "0.6rem 1.2rem" }}>
+                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.72rem", color: C.pink, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>Available</div>
+                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.9rem", color: C.text, fontWeight: 600, marginTop: 2 }}>✅ Freelance</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right — LailaTech card */}
+          <div style={{ background: C.bgAlt, border: `1px solid ${C.border}`, borderRadius: 20, padding: "2.5rem", textAlign: "center", boxShadow: "0 4px 24px rgba(45,21,64,0.06)" }}>
+            <img src="/logo-lt.png" alt="LailaTech" style={{ width: 140, height: 140, objectFit: "contain", marginBottom: "1.5rem" }} />
+            <h3 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1.5rem", fontWeight: 800, color: C.text, margin: "0 0 0.5rem", letterSpacing: "-0.02em" }}>LailaTech</h3>
+            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: C.muted, marginBottom: "1.5rem", lineHeight: 1.65 }}>
+              Web Design & Development · London, UK<br />
+              Building smart, modern websites that grow your business.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+              {[["🌐","Web Design & Development"],["⚡","API Integrations"],["📱","Responsive & Mobile-First"],["🔧","Ongoing Support"]].map(([icon, text]) => (
+                <div key={text} style={{ display: "flex", alignItems: "center", gap: "0.75rem", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, padding: "0.6rem 1rem" }}>
+                  <span style={{ fontSize: "1.1rem" }}>{icon}</span>
+                  <span style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: C.text, fontWeight: 500 }}>{text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Skills() {
   const [ref, inView] = useInView();
   return (
@@ -275,7 +333,7 @@ function ProjectCard({ p, i, inView }) {
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flex: 1, minWidth: 0 }}>
             <div style={{ width: 40, height: 40, borderRadius: 8, background: isF ? C.pinkSoft : C.purpleSoft, border: `1px solid ${isF ? C.pinkBorder : C.purpleBorder}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", flexShrink: 0, transition: "transform 0.3s", transform: hov ? "scale(1.1)" : "scale(1)" }}>{p.icon}</div>
             <div style={{ minWidth: 0 }}>
-              <h3 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1rem", fontWeight: 700, color: C.text, margin: "0 0 0.18rem", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{p.title}</h3>
+              <h3 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1rem", fontWeight: 700, color: C.text, margin: "0 0 0.18rem" }}>{p.title}</h3>
               {p.url && <a href={`https://${p.url}`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.76rem", color: C.pink, textDecoration: "none", fontWeight: 500 }}>↗ {p.url}</a>}
             </div>
           </div>
@@ -413,6 +471,7 @@ export default function App() {
           .projects-grid { grid-template-columns:1fr !important; }
           .skills-grid { grid-template-columns:1fr !important; }
           .contact-grid { grid-template-columns:1fr !important; }
+          .about-grid { grid-template-columns:1fr !important; gap:2rem !important; }
           .stats-row { gap:1.5rem !important; }
           .hero-grid { padding-top:5rem !important; padding-bottom:2rem !important; }
           .projects-header { flex-direction:column !important; align-items:flex-start !important; }
@@ -422,6 +481,7 @@ export default function App() {
       `}</style>
       <Navbar />
       <Hero />
+      <About />
       <Skills />
       <Projects />
       <Contact />
