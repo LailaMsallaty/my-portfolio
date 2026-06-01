@@ -405,7 +405,7 @@ function Contact() {
         </div>
         <div className="contact-grid">
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            {[["📧","lailamsallaty607@gmail.com","mailto:lailamsallaty607@gmail.com"],["💼","linkedin.com/in/laila-msallaty","https://linkedin.com/in/laila-msallaty"],["📞","+44 7857 392770","tel:+447857392770"]].map(([icon, label, href]) => (
+            {[["📧","lailatech.dev@gmail.com","mailto:lailatech.dev@gmail.com"],["💼","linkedin.com/in/laila-msallaty","https://linkedin.com/in/laila-msallaty"],["📞","+44 7857 392770","tel:+447857392770"]].map(([icon, label, href]) => (
               <a key={label} href={href} style={{ display: "flex", alignItems: "center", gap: "0.85rem", color: C.muted, fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", textDecoration: "none", transition: "color 0.2s" }}
                 onMouseEnter={e => e.currentTarget.style.color = C.pink}
                 onMouseLeave={e => e.currentTarget.style.color = C.muted}>
