@@ -126,7 +126,6 @@ function Navbar() {
           {["about","skills","projects","contact"].map(id => (
             <button key={id} onClick={() => go(id)} style={{ background: "none", border: "none", color: C.muted, fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", fontWeight: 500, letterSpacing: "0.07em", textTransform: "uppercase", cursor: "pointer" }}>{id}</button>
           ))}
-          <button onClick={() => go("contact")} style={{ background: C.grad, color: "#fff", border: "none", borderRadius: 6, padding: "0.45rem 1.25rem", fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", fontWeight: 600, cursor: "pointer" }}>Get a Quote</button>
         </div>
         {/* Mobile hamburger */}
         <button className="mob-nav" onClick={() => setOpen(o => !o)} style={{ background: "none", border: `1px solid ${C.border}`, borderRadius: 6, width: 36, height: 36, display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 5, cursor: "pointer" }}>
