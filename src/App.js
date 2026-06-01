@@ -223,9 +223,6 @@ function Hero() {
               <span>{icon}</span><span>{text}</span>
             </div>
           ))}
-          <button onClick={() => go("contact")} style={{ background: C.grad, color: "#fff", borderRadius: 8, padding: "0.65rem 1.5rem", fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", fontWeight: 600, border: "none", cursor: "pointer", width: "100%", transition: "opacity 0.2s" }}>
-            Get a Quote
-          </button>
         </div>
 
       </div>
