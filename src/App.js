@@ -54,7 +54,7 @@ function useTyping(words, speed = 80, pause = 2000) {
   const [wi, setWi] = useState(0);
   const [ci, setCi] = useState(0);
   const [del, setDel] = useState(false);
-  useEffect(() => {
+  useEffect(() => { // eslint-disable-line react-hooks/exhaustive-deps
     const w = words[wi];
     const delay = del ? speed / 2 : ci === w.length ? pause : speed;
     const t = setTimeout(() => {
@@ -64,7 +64,7 @@ function useTyping(words, speed = 80, pause = 2000) {
       else { setDel(false); setWi(i => (i + 1) % words.length); }
     }, delay);
     return () => clearTimeout(t);
-  }, [ci, del, wi, words, speed, pause]);
+  }, [ci, del, wi]); // eslint-disable-line react-hooks/exhaustive-deps
   return display;
 }
 
