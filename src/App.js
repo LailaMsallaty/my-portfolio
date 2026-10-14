@@ -5,6 +5,7 @@ const SKILLS = [
   { category: "Languages & Frameworks", items: ["PHP", "Laravel", "JavaScript", "React.js", "HTML/CSS", "CodeIgniter", "Delphi Pascal"] },
   { category: "Databases & APIs", items: ["MySQL", "SQL", "RESTful APIs", "JSON", "Webhooks"] },
   { category: "Integrations", items: ["Shopify", "WooCommerce", "Salla", "Wix", "MyFatoorah", "Neoleap"] },
+  { category: "Enterprise Systems", items: ["Microsoft Dynamics 365", "Wasfaty", "POS Systems"] },
   { category: "Tools & Practices", items: ["Git / GitHub", "Agile", "Multi-tenancy", "Code Review", "Junior Mentoring"] },
 ];
 
@@ -126,6 +127,7 @@ function Navbar() {
           {["about","skills","projects","contact"].map(id => (
             <button key={id} onClick={() => go(id)} style={{ background: "none", border: "none", color: C.muted, fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", fontWeight: 500, letterSpacing: "0.07em", textTransform: "uppercase", cursor: "pointer" }}>{id}</button>
           ))}
+          <button onClick={() => go("contact")} style={{ background: C.grad, color: "#fff", border: "none", borderRadius: 6, padding: "0.45rem 1.25rem", fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", fontWeight: 600, cursor: "pointer" }}>Get a Quote</button>
         </div>
         {/* Mobile hamburger */}
         <button className="mob-nav" onClick={() => setOpen(o => !o)} style={{ background: "none", border: `1px solid ${C.border}`, borderRadius: 6, width: 36, height: 36, display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 5, cursor: "pointer" }}>
@@ -149,7 +151,7 @@ function Navbar() {
 
 function Hero() {
   const [loaded, setLoaded] = useState(false);
-  const typed = useTyping(["Full Stack Developer","Backend Engineer","API Integration Expert","Freelance Developer"]);
+  const typed = useTyping(["Web Design & Development","API Integration","E-Commerce Solutions","Custom Web Applications"]);
   useEffect(() => { const t = setTimeout(() => setLoaded(true), 100); return () => clearTimeout(t); }, []);
   const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
@@ -166,13 +168,13 @@ function Hero() {
           <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(14px)", transition: "all 0.6s ease", marginBottom: "1.75rem" }}>
             <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.pinkSoft, border: `1px solid ${C.pinkBorder}`, borderRadius: 100, padding: "0.3rem 1rem", fontFamily: "'Inter',sans-serif", fontSize: "0.72rem", fontWeight: 600, color: C.pink, letterSpacing: "0.1em", textTransform: "uppercase" }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#22c55e", display: "inline-block", animation: "pulse 2s infinite" }} />
-              Available for Freelance
+              Based in London, UK
             </span>
           </div>
 
           <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(22px)", transition: "all 0.75s ease 0.1s" }}>
             <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(3rem,6vw,5.2rem)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 0.75rem", letterSpacing: "-0.03em", color: C.text }}>
-              Laila{" "}<span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Msallaty</span>
+              Laila<span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Tech</span>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "1.25rem", minHeight: "2rem" }}>
               <div style={{ height: 2, width: 36, background: C.grad, borderRadius: 2, flexShrink: 0 }} />
@@ -181,8 +183,7 @@ function Hero() {
               </span>
             </div>
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(0.95rem,1.6vw,1.08rem)", color: C.muted, lineHeight: 1.8, maxWidth: 480, margin: "0 0 2.5rem", fontWeight: 450 }}>
-              5+ years building scalable web applications and complex API integrations. Based in{" "}
-              <span style={{ color: C.pink, fontWeight: 600 }}>London, UK</span>.
+              We build professional, high-performing websites and integrations for businesses across the UK and beyond — from sleek landing pages to complex e-commerce platforms.
             </p>
           </div>
 
@@ -195,12 +196,12 @@ function Hero() {
             <button onClick={() => go("contact")} style={{ background: C.surface, color: C.text, border: `1.5px solid ${C.border}`, borderRadius: 8, padding: "0.85rem 2rem", fontFamily: "'Inter',sans-serif", fontSize: "0.9rem", fontWeight: 500, cursor: "pointer", transition: "border-color 0.2s,transform 0.2s" }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = C.pink; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.transform = "none"; }}>
-              Contact Me
+              Get in Touch
             </button>
           </div>
 
           <div className="stats-row" style={{ opacity: loaded ? 1 : 0, transition: "all 1s ease 0.4s", paddingTop: "2rem", borderTop: `1px solid ${C.border}` }}>
-            {[["5+","Years Experience"],["12+","Projects Delivered"],["4","E-Commerce Platforms"]].map(([n, l]) => (
+            {[["12+","Projects Delivered"],["4","E-Commerce Platforms"],["3+","Years in Business"]].map(([n, l]) => (
               <div key={l} style={{ textAlign: "center", minWidth: 70 }}>
                 <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "2.6rem", fontWeight: 800, background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1 }}>{n}</div>
                 <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.72rem", color: C.subtle, textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 4, fontWeight: 600 }}>{l}</div>
@@ -211,18 +212,21 @@ function Hero() {
 
         {/* ── RIGHT CARD ── */}
         <div className="hero-card" style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 24, padding: "2.5rem 2rem", boxShadow: "0 12px 50px rgba(45,21,64,0.1)", width: 290, display: "flex", flexDirection: "column", gap: "1.5rem", alignItems: "center", textAlign: "center", opacity: loaded ? 1 : 0, transition: "all 1s ease 0.5s", flexShrink: 0 }}>
-          <div style={{ width: 130, height: 130, borderRadius: "50%", background: C.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "4rem", boxShadow: "0 8px 24px rgba(240,135,154,0.25)" }}>
-            👩‍💻
+          <div style={{ width: 130, height: 130, borderRadius: "50%", background: C.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "4rem", boxShadow: "0 8px 24px rgba(240,135,154,0.25)", overflow: "hidden" }}>
+            <img src="/logo-lt.png" alt="LailaTech" style={{ width: 90, height: 90, objectFit: "contain" }} onError={e => { e.currentTarget.style.display="none"; e.currentTarget.parentElement.innerHTML="💻"; }} />
           </div>
           <div>
-            <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: "1.1rem", color: C.text }}>Laila Msallaty</div>
-            <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", color: C.muted, marginTop: 4 }}>Full Stack Developer</div>
+            <div style={{ fontFamily: "'Inter',sans-serif", fontWeight: 700, fontSize: "1.1rem", color: C.text }}>LailaTech</div>
+            <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", color: C.muted, marginTop: 4 }}>Web Design & Development</div>
           </div>
-          {[["🇬🇧","London, UK"],["⚡","PHP · Laravel · React"],["🔗","API Integration Expert"]].map(([icon, text]) => (
+          {[["🇬🇧","London, UK"],["⚡","PHP · Laravel · React"],["🔗","API & E-Commerce Expert"]].map(([icon, text]) => (
             <div key={text} style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", color: C.muted }}>
               <span>{icon}</span><span>{text}</span>
             </div>
           ))}
+          <button onClick={() => go("contact")} style={{ background: C.grad, color: "#fff", borderRadius: 8, padding: "0.65rem 1.5rem", fontFamily: "'Inter',sans-serif", fontSize: "0.82rem", fontWeight: 600, border: "none", cursor: "pointer", width: "100%", transition: "opacity 0.2s" }}>
+            Get a Quote
+          </button>
         </div>
 
       </div>
@@ -482,7 +486,7 @@ export default function App() {
       <Projects />
       <Contact />
       <footer style={{ textAlign: "center", padding: "1.5rem", borderTop: `1px solid ${C.border}`, fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", color: C.subtle, background: C.bg }}>
-        © 2026 Laila Msallaty · All rights reserved · Backend & Integration Engineer · London, UK
+        © 2026 LailaTech · All rights reserved · Web Design & Development · London, UK
       </footer>
     </div>
   );
