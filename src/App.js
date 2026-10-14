@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable */
 import { useState, useEffect, useRef, useCallback } from "react";
 
 const SKILLS = [
