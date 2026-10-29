@@ -173,8 +173,8 @@ function Hero() {
           </div>
 
           <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(22px)", transition: "all 0.75s ease 0.1s" }}>
-            <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(3rem,6vw,5.2rem)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 0.75rem", letterSpacing: "-0.03em", color: C.text }}>
-              Laila<span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Tech</span>
+            <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 0.75rem", letterSpacing: "-0.03em", color: C.text }}>
+              Websites that <span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>grow your business</span>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "1.25rem", minHeight: "2rem" }}>
               <div style={{ height: 2, width: 36, background: C.grad, borderRadius: 2, flexShrink: 0 }} />
