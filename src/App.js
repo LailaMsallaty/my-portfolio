@@ -2,14 +2,16 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
 const SKILLS = [
-  { category: "Languages & Frameworks", items: ["PHP", "Laravel", "JavaScript", "React.js", "HTML/CSS", "CodeIgniter", "Delphi Pascal"] },
-  { category: "Databases & APIs", items: ["MySQL", "SQL", "RESTful APIs", "JSON", "Webhooks"] },
+  { category: "Languages & Frameworks", items: ["PHP", "Laravel", "JavaScript", "React.js", "Vite", "Tailwind CSS", "HTML/CSS", "CodeIgniter", "Delphi Pascal"] },
+  { category: "Databases & APIs", items: ["MySQL", "SQL", "Supabase", "PostgreSQL", "RESTful APIs", "JSON", "Webhooks"] },
+  { category: "Cloud & Infrastructure", items: ["Cloudflare R2", "Cloudflare Workers", "Supabase Edge Functions", "PWA", "Web Push"] },
   { category: "Integrations", items: ["Shopify", "WooCommerce", "Salla", "Wix", "MyFatoorah", "Neoleap"] },
   { category: "Enterprise Systems", items: ["Microsoft Dynamics 365", "Wasfaty", "POS Systems"] },
-  { category: "Tools & Practices", items: ["Git / GitHub", "Agile", "Multi-tenancy", "Code Review", "Junior Mentoring"] },
+  { category: "Tools & Practices", items: ["Git / GitHub", "Agile", "Multi-tenancy", "Offline-first", "Code Review", "Junior Mentoring"] },
 ];
 
 const FREELANCE = [
+  { title: "SIS Surveys", url: null, desc: "Full-stack PWA for Structural Integrity Survey — engineers log inspections, capture photos, and generate professional PDF/Word/Excel reports, all offline-capable with automatic sync. Features role-based access (admin/engineer), client & billing management, and real-time updates via Supabase.", tags: ["React", "Vite", "Tailwind", "PWA", "Supabase", "Cloudflare", "pdfmake", "Offline-first"], icon: "📋", category: "Freelance" },
   { title: "Structural Integrity Survey", url: "structuralintegritysurvey.co.uk", desc: "Professional website for a London structural engineering consultancy covering nine specialist services, with custom HTML sections embedded into Hostinger.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "🏚️", category: "Freelance" },
   { title: "Build and Ventilation Ltd", url: "buildandventilation.co.uk", desc: "Full business website for a London-based HVAC & mechanical contracting company — services pages, project gallery, and contact/quote form.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "🏗️", category: "Freelance" },
   { title: "Bensham Pharmacy", url: "benshampharmacy.co.uk", desc: "Online presence for a UK pharmacy client — professional site covering services, opening hours, and patient information.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "💊", category: "Freelance" },
@@ -173,8 +175,8 @@ function Hero() {
           </div>
 
           <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(22px)", transition: "all 0.75s ease 0.1s" }}>
-            <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(2.4rem,5vw,4rem)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 0.75rem", letterSpacing: "-0.03em", color: C.text }}>
-              Websites that <span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>grow your business</span>
+            <h1 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(2.2rem,5vw,4.2rem)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 0.75rem", letterSpacing: "-0.03em", color: C.text }}>
+              Websites That <span style={{ background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Grow Your Business</span>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "1.25rem", minHeight: "2rem" }}>
               <div style={{ height: 2, width: 36, background: C.grad, borderRadius: 2, flexShrink: 0 }} />
