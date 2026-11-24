@@ -11,25 +11,17 @@ const SKILLS = [
 ];
 
 const FREELANCE = [
-  { title: "SIS Surveys", url: null, desc: "Full-stack PWA for Structural Integrity Survey — engineers log inspections, capture photos, and generate professional PDF/Word/Excel reports, all offline-capable with automatic sync. Features role-based access (admin/engineer), client & billing management, and real-time updates via Supabase.", tags: ["React", "Vite", "Tailwind", "PWA", "Supabase", "Cloudflare", "pdfmake", "Offline-first"], icon: "📋", category: "Freelance" },
-  { title: "Structural Integrity Survey", url: "structuralintegritysurvey.co.uk", desc: "Professional website for a London structural engineering consultancy covering nine specialist services, with custom HTML sections embedded into Hostinger.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "🏚️", category: "Freelance" },
-  { title: "Build and Ventilation Ltd", url: "buildandventilation.co.uk", desc: "Full business website for a London-based HVAC & mechanical contracting company — services pages, project gallery, and contact/quote form.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "🏗️", category: "Freelance" },
-  { title: "Bensham Pharmacy", url: "benshampharmacy.co.uk", desc: "Online presence for a UK pharmacy client — professional site covering services, opening hours, and patient information.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "💊", category: "Freelance" },
-  { title: "Electric Bike Hakim", url: "electricbikehakim.co.uk", desc: "Full e-commerce website & online store for a UK electric bikes and scooters shop — new & used sales, accessories, parts, and repair/servicing.", tags: ["HTML", "CSS", "JS", "Hostinger", "E-Commerce"], icon: "🚲", category: "Freelance" },
+  { title: "SIS Surveys", url: null, desc: "Full-stack PWA for Structural Integrity Survey — engineers log inspections, capture photos, and generate professional PDF/Word/Excel reports, all offline-capable with automatic sync. Features role-based access (admin/engineer), client & billing management, and real-time updates via Supabase.", tags: ["React", "Vite", "Tailwind", "PWA", "Supabase", "Cloudflare", "pdfmake", "Offline-first"], icon: "📋", category: "" },
+  { title: "Structural Integrity Survey", url: "structuralintegritysurvey.co.uk", desc: "Professional website for a London structural engineering consultancy covering nine specialist services, with custom HTML sections embedded into Hostinger.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "🏚️", category: "" },
+  { title: "Build and Ventilation Ltd", url: "buildandventilation.co.uk", desc: "Full business website for a London-based HVAC & mechanical contracting company — services pages, project gallery, and contact/quote form.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "🏗️", category: "" },
+  { title: "Bensham Pharmacy", url: "benshampharmacy.co.uk", desc: "Online presence for a UK pharmacy client — professional site covering services, opening hours, and patient information.", tags: ["HTML", "CSS", "JS", "Hostinger"], icon: "💊", category: "" },
+  { title: "Electric Bike Hakim", url: "electricbikehakim.co.uk", desc: "Full e-commerce website & online store for a UK electric bikes and scooters shop — new & used sales, accessories, parts, and repair/servicing.", tags: ["HTML", "CSS", "JS", "Hostinger", "E-Commerce"], icon: "🚲", category: "" },
+  { title: "HR Management System", url: null, desc: "Built an HR management system covering employee records, attendance tracking, and automated report generation.", tags: ["PHP", "Laravel", "MySQL"], icon: "👥", category: "" },
+  { title: "E-Commerce Platform", url: null, desc: "Developed a full e-commerce platform with admin dashboard, analytics, user management, and activity logs.", tags: ["PHP", "Laravel", "MySQL", "E-Commerce"], icon: "🏪", category: "" },
+  { title: "TecPlatform", url: "tecplatform.net", desc: "Extended and customised tecplatform.net using CodeIgniter — improved UX and added new feature modules.", tags: ["CodeIgniter", "PHP", "MySQL"], icon: "💻", category: "" },
 ];
 
-const PHENIX = [
-  { title: "E-Commerce Integrations", url: null, desc: "Integration modules connecting Ph.S with Shopify, WooCommerce, Wix, and Salla — real-time product sync, stock updates, order import, and customer data sync.", tags: ["Delphi Pascal", "SQL", "REST API", "Shopify", "WooCommerce"], icon: "🛒", category: "Phenix Systems" },
-  { title: "Wasfaty Integration App", url: null, desc: "App enabling pharmacists to retrieve and dispense NHS-style prescriptions directly within Ph.S with minimal clicks.", tags: ["Delphi Pascal", "SQL", "API Integration", "Healthcare"], icon: "🩺", category: "Phenix Systems" },
-  { title: "Phenix Appointments App", url: null, desc: "Integration app that auto-exports appointment data into Ph.S, eliminating manual data entry for clinic and service businesses.", tags: ["CodeIgniter", "SQL", "Automation"], icon: "📅", category: "Phenix Systems" },
-  { title: "Payment Gateway Integrations", url: null, desc: "Integrated MyFatoorah and Neoleap payment gateways via REST API into Ph.S, enabling secure online transactions for clients.", tags: ["Delphi Pascal", "SQL", "REST API", "MyFatoorah", "Neoleap"], icon: "💳", category: "Phenix Systems" },
-  { title: "Microsoft Dynamics 365 Loyalty", url: null, desc: "Module for redeeming customer loyalty points through Phenix POS — fetching points from Ph.S and updating them in D365 via API.", tags: ["Delphi Pascal", "SQL", "REST API", "POS"], icon: "⭐", category: "Phenix Systems" },
-  { title: "Phenix Menu Web App", url: null, desc: "Multi-tenant online ordering platform built from scratch — full admin dashboard, analytics, and user management.", tags: ["PHP", "Laravel", "MySQL", "Multi-tenancy"], icon: "🍽️", category: "Phenix Systems" },
-  { title: "Healthcare Module", url: null, desc: "Led a team of 3 developers to build a healthcare module for medical institutions — managed task planning, code reviews, and client delivery.", tags: ["Delphi Pascal", "SQL", "Team Lead", "Healthcare"], icon: "🏥", category: "Phenix Systems" },
-  { title: "MySQL Query Optimisation", url: null, desc: "Optimised complex MySQL queries across the Ph.S platform, significantly improving reporting performance on high-volume datasets.", tags: ["SQL", "Performance", "Backend"], icon: "⚙️", category: "Phenix Systems" },
-];
-
-const ALL = [...FREELANCE, ...PHENIX];
+const ALL = [...FREELANCE];
 
 const C = {
   bg: "#ffffff", bgAlt: "#fdf8fb", bgHero: "#fef6f9", surface: "#ffffff",
@@ -203,7 +195,7 @@ function Hero() {
           </div>
 
           <div className="stats-row" style={{ opacity: loaded ? 1 : 0, transition: "all 1s ease 0.4s", paddingTop: "2rem", borderTop: `1px solid ${C.border}` }}>
-            {[["12+","Projects Delivered"],["4","E-Commerce Platforms"],["3+","Years in Business"]].map(([n, l]) => (
+            {[["12+","Projects Delivered"],["4","E-Commerce Platforms"],["5+","Years in Business"]].map(([n, l]) => (
               <div key={l} style={{ textAlign: "center", minWidth: 70 }}>
                 <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "2.6rem", fontWeight: 800, background: C.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1 }}>{n}</div>
                 <div style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.72rem", color: C.subtle, textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 4, fontWeight: 600 }}>{l}</div>
@@ -339,7 +331,6 @@ function ProjectCard({ p, i, inView }) {
               {p.url && <a href={`https://${p.url}`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.76rem", color: C.pink, textDecoration: "none", fontWeight: 500 }}>↗ {p.url}</a>}
             </div>
           </div>
-          <span style={{ flexShrink: 0, background: isF ? C.pinkSoft : C.purpleSoft, border: `1px solid ${isF ? C.pinkBorder : C.purpleBorder}`, borderRadius: 4, padding: "0.15rem 0.5rem", fontFamily: "'Inter',sans-serif", fontSize: "0.58rem", color: isF ? C.pink : C.purple, textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 700 }}>{p.category}</span>
         </div>
         <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.88rem", color: C.muted, lineHeight: 1.65, margin: 0, flex: 1 }}>{p.desc}</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", paddingTop: "0.6rem", borderTop: `1px solid ${C.border}` }}>
@@ -352,27 +343,15 @@ function ProjectCard({ p, i, inView }) {
 
 function Projects() {
   const [ref, inView] = useInView();
-  const [filter, setFilter] = useState("Freelance");
-  const TABS = [{ label: "Freelance", count: FREELANCE.length }, { label: "Phenix Systems", count: PHENIX.length }, { label: "All", count: ALL.length }];
-  const visible = filter === "Freelance" ? FREELANCE : filter === "Phenix Systems" ? PHENIX : ALL;
   return (
     <section id="projects" ref={ref} style={{ padding: "4rem 1.5rem", background: C.bg }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div className="projects-header" style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: "1.75rem", flexWrap: "wrap", gap: "1.25rem", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(18px)", transition: "all 0.6s ease" }}>
-          <div>
-            <p style={{ fontFamily: "'Inter',sans-serif", color: C.pink, fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", marginBottom: "0.4rem" }}>Work</p>
-            <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(1.8rem,4vw,2.6rem)", fontWeight: 800, color: C.text, margin: 0, letterSpacing: "-0.02em" }}>Selected Projects</h2>
-          </div>
-          <div className="filter-tabs" style={{ display: "flex", border: `1px solid ${C.border}`, borderRadius: 8, overflow: "hidden", flexShrink: 0 }}>
-            {TABS.map((t, i) => (
-              <button key={t.label} onClick={() => setFilter(t.label)} style={{ background: filter === t.label ? C.grad : C.bgAlt, color: filter === t.label ? "#fff" : C.muted, border: "none", borderRight: i < TABS.length - 1 ? `1px solid ${C.border}` : "none", padding: "0.5rem 1rem", fontFamily: "'Inter',sans-serif", fontSize: "0.78rem", fontWeight: filter === t.label ? 600 : 500, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
-                {t.label} ({t.count})
-              </button>
-            ))}
-          </div>
+        <div style={{ marginBottom: "1.75rem", opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(18px)", transition: "all 0.6s ease" }}>
+          <p style={{ fontFamily: "'Inter',sans-serif", color: C.pink, fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", marginBottom: "0.4rem" }}>Work</p>
+          <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(1.8rem,4vw,2.6rem)", fontWeight: 800, color: C.text, margin: 0, letterSpacing: "-0.02em" }}>Selected Projects</h2>
         </div>
         <div className="projects-grid">
-          {visible.map((p, i) => <ProjectCard key={p.title} p={p} i={i} inView={inView} />)}
+          {ALL.map((p, i) => <ProjectCard key={p.title} p={p} i={i} inView={inView} />)}
         </div>
       </div>
     </section>
